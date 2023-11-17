@@ -2,7 +2,7 @@ import {Modal} from "@material-ui/core";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import CloseIcon from '@mui/icons-material/Close';
-import {Grid} from "@mui/material";
+import UploadForm from "../Form/uploadForm";
 
 const style = {
     position: 'absolute',
@@ -29,28 +29,23 @@ export default function BasicModal(props) {
         >
             <Box sx={style}>
                 <CloseIcon
-                    sx={{bgcolor: 'rgb(1,24,86)', color: 'white', borderRadius: 1.5, padding: 0.3, cursor: 'pointer'}}
+                    sx={{bgcolor: 'rgb(1,24,86)', color: 'white', borderRadius: 1.5, padding: 0.3, cursor: 'pointer', width: '35px', height: '35px'}}
                     onClick={handleClose}/>
                 <Box id="modal-modal-title" sx={
                     {
                         width: 'fit-content',
                         margin: 'auto',
-                        borderBottom: 3,
+                        borderBottom: 2,
                         borderBottomColor: '#E4E4E4',
-                        paddingBottom: 10,
-                        marginBottom: 4,
-                        borderBottomStyle: 'solid'
+                        paddingBottom: 20,
+                        marginBottom: 40,
+                        borderBottomStyle: 'solid',
                     }}>
-                    <Typography variant="h5" component="h3" align={'center'}>
+                    <Typography variant="h5" component="h3" align={'center'} style={{fontWeight: 600}}>
                         Document Upload
                     </Typography>
                 </Box>
-                <Typography id="modal-modal-description" sx={{mt: 2}}>
-                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula Duis mollis, est non commodo luctus,
-                    nisi erat porttitor ligula.
-                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-                    .
-                </Typography>
+                <UploadForm/>
             </Box>
         </Modal>
     );
