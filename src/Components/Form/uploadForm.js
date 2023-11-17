@@ -9,12 +9,13 @@ import {
     RadioGroup,
     Select, Stack, styled, Switch
 } from "@mui/material";
-import {useState} from "react";
+import React, {useState} from "react";
 import {Button} from "@material-ui/core";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
 import {SwitchProps} from "@mui/material";
+import Basic from "../Dropzone/Dropzone";
 
 export default function UploadForm() {
     function handleSubmit(event) {
@@ -83,6 +84,7 @@ export default function UploadForm() {
         <form onSubmit={handleSubmit} sx={{flexGrow: 1}}>
             <Grid container rowSpacing={2} columnSpacing={6} maxWidth={'90%'} margin={'auto'}>
                 <Grid xs={7} item={true}>
+                    {/*Select Name*/}
                     <FormControl fullWidth>
                         <InputLabel id="demo-simple-select-label">Select Import Name:</InputLabel>
                         <Select
@@ -97,8 +99,24 @@ export default function UploadForm() {
                             <MenuItem value={30}>Thirty</MenuItem>
                         </Select>
                     </FormControl>
+                    {/*File Dropzone*/}
                     <Box sx={{
                         marginTop: '20px',
+                        borderTop: '2px solid #E4E4E4',
+                        paddingTop: '20px',
+                        paddingBottom: '20px',
+                        width: 'fit-content'
+                    }}>
+                        <Typography variant="subtitle1" component="h2" style={{fontWeight: 600}}>
+                            Select a manifest you'd like to import
+                        </Typography>
+                    </Box>
+                    <Box sx={{border: '2px solid #E4E4E4', padding: '60px 40px', borderRadius: '8px', position: 'relative'}}>
+                        <Basic/>
+                    </Box>
+                    {/*Data Checking*/}
+                    <Box sx={{
+                        marginTop: '100px',
                         marginBottom: '20px',
                         borderTop: '2px solid #E4E4E4',
                         borderBottom: '2px solid #E4E4E4',
