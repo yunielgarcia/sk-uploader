@@ -30,16 +30,16 @@ export default function BasicModal(props) {
                 borderBottomColor: '#E4E4E4',
                 marginBottom: 2,
             }}>Document Upload</DialogTitle>
-                <CloseIcon sx={{
-                    bgcolor: 'rgb(1,24,86)',
-                    color: 'white',
-                    borderRadius: 1.5,
-                    padding: 0.3,
-                    width: '35px',
-                    height: '35px',
-                    position: 'absolute',
-                    top: '25px', left: '25px', cursor: 'pointer'
-                }} onClick={handleClose}/>
+            <CloseIcon sx={{
+                bgcolor: 'rgb(1,24,86)',
+                color: 'white',
+                borderRadius: 1.5,
+                padding: 0.3,
+                width: '35px',
+                height: '35px',
+                position: 'absolute',
+                top: '25px', left: '25px', cursor: 'pointer'
+            }} onClick={handleClose}/>
             <DialogContent>
                 <UploadForm/>
             </DialogContent>
