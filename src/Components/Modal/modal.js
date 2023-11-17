@@ -20,6 +20,9 @@ export default function BasicModal(props) {
     return (
         <Dialog open={open} onClose={handleClose} fullWidth maxWidth={'lg'}>
             <DialogTitle sx={{
+                color: '#011856',
+                fontSize: '30px',
+                fontWeight: '600',
                 alignSelf: 'center',
                 width: 'fit-content',
                 margin: 'auto',
@@ -43,9 +46,30 @@ export default function BasicModal(props) {
             <DialogContent>
                 <UploadForm/>
             </DialogContent>
-            <DialogActions>
-                <Button onClick={handleClose}>Cancel</Button>
-                <Button onClick={handleClose}>Subscribe</Button>
+            <DialogActions
+                sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'space-betwen'}}>
+                <Typography variant={'h6'} style={{fontWeight: 600, marginBottom: '10px', color: '#011856',}}>Data in the import file is correct. Please press Continue to import.</Typography>
+                <Box>
+                    <Button
+                        style={{
+                            textTransform: 'capitalize',
+                            backgroundColor: 'rgb(1,24,86)',
+                            color: '#fff',
+                            width: '200px',
+                            height: '40px'}} onClick={handleClose}>
+                        Continue Import
+                    </Button>
+                    <Button
+                        variant={'outlined'}
+                        style={{
+                            textTransform: 'capitalize',
+                            width: '200px',
+                            height: '40px',
+                            borderColor: '#EFA130',
+                            color: '#EFA130'
+                    }} onClick={handleClose}>Cancel</Button>
+                </Box>
+
             </DialogActions>
         </Dialog>
     );

@@ -68,20 +68,21 @@ export default function Basic(props) {
                 <Box sx={{marginTop: 10}}>Drag & Drop Here Or <strong>Browse</strong> </Box>
                 <Button onClick={open}
                         style={{
+                            textTransform: 'capitalize',
                             position: 'absolute',
                             bottom: '5px',
                             backgroundColor: 'rgb(1,24,86)', color: '#fff'}}>Upload Manifest</Button>
             </Box>
-            <Stack direction={'row'}
-                   sx={{position: 'absolute',
-                       padding: '20px',
-                       bottom: '-90px',
-                       left: '0',
-                       borderBottom: '2px solid #E4E4E4',
-                       borderTop: '2px solid #E4E4E4'}}>
+            {files.length > 0 && <Stack direction={'row'}
+                             sx={{position: 'absolute',
+                                 padding: '20px',
+                                 bottom: '-90px',
+                                 left: '0',
+                                 borderBottom: '2px solid #E4E4E4',
+                                 borderTop: '2px solid #E4E4E4'}}>
                 <DescriptionIcon/>
                 <Box>{files}</Box>
-            </Stack>
+            </Stack>}
         </Box>
     );
 }

@@ -151,7 +151,7 @@ export default function UploadForm() {
                 <Grid xs={5} item={true}>
                     {/*schedule*/}
                     <FormControl sx={{borderBottom: '2px solid #E4E4E4', paddingBottom: '20px'}}>
-                        <FormLabel id="demo-row-radio-buttons-group-label">Split schedule using social
+                        <FormLabel id="demo-row-radio-buttons-group-label" sx={{color: '#011856'}}>Split schedule using social
                             distancing?</FormLabel>
                         <RadioGroup
                             row
@@ -173,24 +173,24 @@ export default function UploadForm() {
                     </Box>
                     {/*  Client  */}
                     <FormControl sx={{marginTop: '20px', paddingBottom: '20px'}}>
-                        <FormLabel id="demo-row-radio-buttons-group-label">Client:</FormLabel>
+                        <FormLabel id="demo-row-radio-buttons-group-label" sx={{color: '#011856', fontWeight: '600'}}>Client:</FormLabel>
                         <RadioGroup
                             row
                             aria-labelledby="demo-row-radio-buttons-group-label"
                             name="row-radio-buttons-group"
                         >
-                            <FormControlLabel value="s" control={<Radio/>} label="Single"/>
-                            <FormControlLabel value="m" control={<Radio/>} label="Multiple"/>
+                            <FormControlLabel value="s" control={<Radio/>} label="Single" sx={{color: '#011856'}}/>
+                            <FormControlLabel value="m" control={<Radio/>} label="Multiple" sx={{color: '#011856'}}/>
                         </RadioGroup>
                     </FormControl>
                     {/*  Center(s)  */}
                     <Stack direction="row" spacing={2}
                            sx={{display: 'flex', alignItems: 'center', marginBottom: '20px'}}>
-                        <Typography variant="subtitle1" style={{fontWeight: 600, marginRight: '20px'}}>
+                        <Typography variant="subtitle1" style={{color: '#011856', marginRight: '20px'}}>
                             Testing Center 1
                         </Typography>
                         <FormControl sx={{width: '150px'}}>
-                            <InputLabel id="demo-simple-select-label">Select Client</InputLabel>
+                            <InputLabel id="demo-simple-select-label" sx={{color: '#011856'}}>Select Client</InputLabel>
                             <Select
                                 labelId="demo-simple-select-label"
                                 id="demo-simple-select"
@@ -207,11 +207,11 @@ export default function UploadForm() {
                     </Stack>
                     <Stack direction="row" spacing={2}
                            sx={{display: 'flex', alignItems: 'center', marginBottom: '20px'}}>
-                        <Typography variant="subtitle1" style={{fontWeight: 600, marginRight: '20px'}}>
+                        <Typography variant="subtitle1" style={{color: '#011856', marginRight: '20px'}}>
                             Testing Center 2
                         </Typography>
                         <FormControl sx={{width: '150px'}}>
-                            <InputLabel id="demo-simple-select-label">Select Client</InputLabel>
+                            <InputLabel id="demo-simple-select-label" sx={{color: '#011856'}}>Select Client</InputLabel>
                             <Select
                                 labelId="demo-simple-select-label"
                                 id="demo-simple-select"
@@ -228,11 +228,11 @@ export default function UploadForm() {
                     </Stack>
                     <Stack direction="row" spacing={2}
                            sx={{display: 'flex', alignItems: 'center', marginBottom: '20px'}}>
-                        <Typography variant="subtitle1" style={{fontWeight: 600, marginRight: '20px'}}>
+                        <Typography variant="subtitle1" style={{color: '#011856', marginRight: '20px'}}>
                             Testing Center 3
                         </Typography>
                         <FormControl sx={{width: '150px'}}>
-                            <InputLabel id="demo-simple-select-label">Select Client</InputLabel>
+                            <InputLabel id="demo-simple-select-label" sx={{color: '#011856'}}>Select Client</InputLabel>
                             <Select
                                 labelId="demo-simple-select-label"
                                 id="demo-simple-select"
@@ -249,12 +249,12 @@ export default function UploadForm() {
                     </Stack>
                     <Stack direction="row" spacing={2}
                            sx={{display: 'flex', alignItems: 'center', marginBottom: '20px'}}>
-                        <Typography variant="subtitle1" style={{fontWeight: 600, marginRight: '20px'}}>
+                        <Typography variant="subtitle1" style={{color: '#011856', marginRight: '20px'}}>
                             Testing Center 4
                         </Typography>
                         <FormControl sx={{width: '150px'}}>
-                            <InputLabel id="demo-simple-select-label">Select Client</InputLabel>
-                            <Select
+                            <InputLabel id="demo-simple-select-label" sx={{color: '#011856'}}>Select Client</InputLabel>
+                            <Select sx={{color: '#011856'}}
                                 labelId="demo-simple-select-label"
                                 id="demo-simple-select"
                                 value={age}
