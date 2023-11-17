@@ -29,7 +29,7 @@ export default function UploadForm() {
 
     return (
         <form onSubmit={handleSubmit} sx={{flexGrow: 1}}>
-            <Grid container rowSpacing={2} columnSpacing={10} maxWidth={'90%'} margin={'auto'}>
+            <Grid container rowSpacing={2} columnSpacing={6} maxWidth={'90%'} margin={'auto'}>
                 <Grid xs={7} item={true}>
                     <FormControl fullWidth>
                         <InputLabel id="demo-simple-select-label">Select Import Name:</InputLabel>
